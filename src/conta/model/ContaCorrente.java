@@ -27,6 +27,11 @@ public class ContaCorrente extends Conta {
 		}
 
 		this.setSaldo(this.getSaldo() - valor);
+		
+		if (this.getSaldo() < 0) {
+			this.setLimite(this.getSaldo()+this.getLimite());
+		}
+
 		return true;
 	}
 
