@@ -82,7 +82,7 @@ public class ContaController implements ContaRepository {
 			System.out.println("\nO Depósito na Conta Número:" + " " + numero + " " + "foi efetuado com sucesso!");
 		} else
 			System.out.println(
-					"\nA Conta Número:" + " " + "não foi encontrada ou a Conta destino não é uma Conta Corrente!");
+					"\nA Conta Número:" + " " + numero + "não foi encontrada ou a Conta destino não é uma Conta Corrente!");
 	}
 
 	@Override
@@ -94,7 +94,7 @@ public class ContaController implements ContaRepository {
 
 			if (listaContas.get(listaContas.indexOf(buscaContaOrigem)).sacar(valor) == true) {
 				listaContas.get(listaContas.indexOf(buscaContaDestino)).depositar(valor);
-				System.out.println("\nA transferência foi efetuado com sucesso!");
+				System.out.println("\nA transferência foi efetuada com sucesso!");
 			}
 
 		} else
